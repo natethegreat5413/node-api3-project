@@ -17,7 +17,7 @@ router.post('/', validateUser, (req, res) => {
 });
 
 router.post("/:id/posts",[validateUserId, validatePost], (req, res) => {
-  // working
+  // do your magic!
 
   Posts.insert(req.body)
     .then(post => {
@@ -92,6 +92,7 @@ router.put('/:id', validateUserId, (req, res) => {
 //custom middleware
 
 function validateUserId(req, res, next) {
+  // do your magic!
   const id = req.params.id;
 
   Users.getById(id)
