@@ -48,7 +48,7 @@ router.get('/:id', validateUserId, (req, res) => {
     })
 });
 
-router.get('/:id/posts', validateUserId, validatePost, (req, res) => {
+router.get('/:id/posts', validateUserId, (req, res) => {
   // do your magic!
   Posts.getById(req.params.id)
     .then(post => {
